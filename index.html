@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desert Safari Dubai | Rulex-style Modern</title>
+
+  <!-- Google Fonts: Cairo + Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/J+e7O9XyXrN9T+0U1wWb4e9c9w2KMWvYqLQO+v9QnF3QF6H3Qk5xv5gCz3v56y7r1h4rYx4Yg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <img src="desert_demo logo.png" alt="Company Logo" class="brand-logo" />
+        <span class="brand-name">Desert Safari</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#desert-safari">Desert Safari</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO / SLIDER ===== -->
+  <main id="home">
+    <section class="hero">
+      <div class="slider" role="region" aria-label="Featured media slider">
+        <!-- Slide 1 (Photo) -->
+        <div class="slide is-active" data-title-en="Premium Desert Safari"
+             data-title-ar="سفاري صحراوي فاخر" data-cta="Book Now" data-cta-link="#contact">
+          <img src="assets/slide1.jpg" alt="Luxury desert safari camp" loading="eager" />
+        </div>
+
+        <!-- Slide 2 (Video) -->
+        <div class="slide" data-title-en="Dune Bashing Video"
+             data-title-ar="قيادة الكثبان الرملية" data-cta="Watch & Book" data-cta-link="#contact">
+          <video class="video" autoplay muted loop playsinline preload="metadata">
+            <source src="assets/hero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Slide 3 (Photo) -->
+        <div class="slide" data-title-en="Sunset Camel Ride"
+             data-title-ar="جولة الجمال وقت الغروب" data-cta="Explore Packages" data-cta-link="#desert-safari">
+          <img src="assets/slide2.jpg" alt="Camel caravan at sunset" loading="lazy" />
+        </div>
+
+        <!-- Caption Overlay (auto-changes with slide) -->
+        <div class="hero-caption">
+          <h1 class="hero-title">
+            <span class="en"></span>
+            <span class="ar" dir="rtl"></span>
+          </h1>
+          <a class="btn btn-olive hero-cta" href="#" aria-label="Call to action"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section section-alt container">
+      <div class="section-head">
+        <h2 class="section-title">About Us <span class="ar" dir="rtl">من نحن</span></h2>
+        <p class="section-subtitle">
+          Authentic, eco-conscious desert experiences in Dubai — luxury camps, dune bashing, camel rides, stargazing, and gourmet Emirati cuisine.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== DESERT SAFARI ===== -->
+    <section id="desert-safari" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Desert Safari <span class="ar" dir="rtl">سفاري الصحراء</span></h2>
+        <p class="section-subtitle">Hand-picked experiences for sunrise, afternoon, and overnight safaris.</p>
+      </div>
+      <div class="card-grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="assets/safari-morning.jpg" alt="Morning desert safari" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Morning Safari</h3>
+            <p class="card-text">Dune bashing, sandboarding & camel photo stop.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="assets/safari-evening.jpg" alt="Evening desert safari" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Evening Safari</h3>
+            <p class="card-text">Sunset views, BBQ dinner & live performances.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="assets/safari-overnight.jpg" alt="Overnight desert safari" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Overnight Safari</h3>
+            <p class="card-text">Luxury camp, stargazing & breakfast.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== DUNE BIKE ===== -->
+    <section class="section section-alt container">
+      <div class="section-head">
+        <h2 class="section-title">Dune Bike <span class="ar" dir="rtl">دراجات الكثبان</span></h2>
+        <p class="section-subtitle">ATV quad adventures for every skill level.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <img src="assets/atv-1.jpg" alt="ATV 30 minutes" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">ATV – 30 min</h3>
+            <p class="card-text">Great intro ride with guide support.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/atv-2.jpg" alt="ATV 1 hour" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">ATV – 1 hour</h3>
+            <p class="card-text">Explore deeper dunes & scenic stops.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/atv-3.jpg" alt="ATV sunrise" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">ATV – Sunrise</h3>
+            <p class="card-text">Golden light & cool temperatures.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== DUNE BUGGY ===== -->
+    <section class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Dune Buggy <span class="ar" dir="rtl">عربات الكثبان</span></h2>
+        <p class="section-subtitle">Powerful buggies for an unforgettable thrill.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <img src="assets/buggy-1.jpg" alt="Buggy 30 min" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Buggy – 30 min</h3>
+            <p class="card-text">Quick blast across the dunes.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/buggy-2.jpg" alt="Buggy 1 hour" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Buggy – 1 hour</h3>
+            <p class="card-text">Technical routes with a pro guide.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/buggy-3.jpg" alt="Buggy sunset" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Buggy – Sunset</h3>
+            <p class="card-text">Epic light + photo moments.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CITY TOURS ===== -->
+    <section class="section section-alt container">
+      <div class="section-head">
+        <h2 class="section-title">City Tours <span class="ar" dir="rtl">جولات المدينة</span></h2>
+        <p class="section-subtitle">Discover Dubai’s skyline, culture, and cuisine.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <img src="assets/city-old-dubai.jpg" alt="Old Dubai tour" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Old Dubai</h3>
+            <p class="card-text">Souks, abra ride & heritage houses.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/city-modern.jpg" alt="Modern Dubai tour" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Modern Dubai</h3>
+            <p class="card-text">Burj Khalifa, Marina, Ain Dubai stops.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/city-night.jpg" alt="Night Dubai tour" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title">Dubai by Night</h3>
+            <p class="card-text">Lights, fountains & rooftop views.</p>
+            <a href="#contact" class="btn btn-outline">Book</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faqs" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">FAQs <span class="ar" dir="rtl">الأسئلة الشائعة</span></h2>
+      </div>
+      <div class="faq-grid">
+        <!-- Left: Questions -->
+        <div class="faq-card">
+          <details open>
+            <summary>What should I wear?</summary>
+            <p>Light breathable clothing and closed shoes recommended.</p>
+          </details>
+          <details>
+            <summary>Is the tour suitable for kids?</summary>
+            <p>Yes, family-friendly options available. Check age limits per activity.</p>
+          </details>
+          <details>
+            <summary>Hotel pickup included?</summary>
+            <p>Central Dubai pickup available for most packages.</p>
+          </details>
+          <details>
+            <summary>Is food included?</summary>
+            <p>Evening & overnight safaris include BBQ dinner and soft drinks.</p>
+          </details>
+          <details>
+            <summary>Refund & reschedule policy?</summary>
+            <p>Free reschedule up to 24 hours; refunds per package terms.</p>
+          </details>
+        </div>
+        <!-- Right: Image -->
+        <div class="faq-image-card">
+          <img src="assets/faq-desert.jpg" alt="Desert safari scene" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY (Anchor only; add your grid later) ===== -->
+    <section id="gallery" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Gallery <span class="ar" dir="rtl">المعرض</span></h2>
+        <p class="section-subtitle">Add your best shots & short clips here.</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section section-alt container">
+      <div class="section-head">
+        <h2 class="section-title">Contact Us <span class="ar" dir="rtl">اتصل بنا</span></h2>
+        <p class="section-subtitle">We’ll get back within 30 minutes during 9am–11pm.</p>
+      </div>
+      <div class="contact-cta">
+        <a class="btn btn-olive" href="tel:+971500000000"><i class="fa-solid fa-phone"></i> Call</a>
+        <a class="btn btn-outline" href="https://wa.me/971500000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a class="btn btn-outline" href="https://maps.google.com/?q=Dubai" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i> Map</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Company Logo" class="brand-logo" />
+        <p>Desert Safari Dubai</p>
+        <div class="footer-icons">
+          <a href="tel:+971500000000" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://wa.me/971500000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://maps.google.com/?q=Dubai" target="_blank" rel="noopener" aria-label="Map"><i class="fa-solid fa-map-location-dot"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#desert-safari">Desert Safari</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <address class="footer-contact">
+        <h4>Address & Contact</h4>
+        <p>Dubai, United Arab Emirates</p>
+        <p><a href="tel:+971500000000">+971 50 000 0000</a></p>
+        <p><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+      </address>
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> Desert Safari Dubai. All rights reserved.
+    </div>
+  </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
