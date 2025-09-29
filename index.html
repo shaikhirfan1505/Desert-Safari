@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Desert Safari Dubai | Rulex-style Modern</title>
+  <title>Desert Safari Dubai</title>
 
   <!-- Google Fonts: Cairo + Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -40,40 +40,41 @@
   </header>
 
   <!-- ===== HERO / SLIDER ===== -->
-  <main id="home">
-    <section class="hero">
-      <div class="slider" role="region" aria-label="Featured media slider">
-        <!-- Slide 1 (Photo) -->
-        <div class="slide is-active" data-title-en="Premium Desert Safari"
-             data-title-ar="سفاري صحراوي فاخر" data-cta="Book Now" data-cta-link="#contact">
-          <img src="dummy 1.jpeg" alt="Luxury desert safari camp" loading="eager" />
-        </div>
+<main id="home">
+  <section class="hero">
+    <div class="slider" role="region" aria-label="Featured media slider">
 
-        <!-- Slide 2 (Video) -->
-        <div class="slide" data-title-en="Dune Bashing Video"
-             data-title-ar="قيادة الكثبان الرملية" data-cta="Watch & Book" data-cta-link="#contact">
-          <video class="video" autoplay muted loop playsinline preload="metadata">
-            <source src="desert video demo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- Slide 3 (Photo) -->
-        <div class="slide" data-title-en="Sunset Camel Ride"
-             data-title-ar="جولة الجمال وقت الغروب" data-cta="Explore Packages" data-cta-link="#desert-safari">
-          <img src="dummy 2.jpeg" alt="Camel caravan at sunset" loading="lazy" />
-        </div>
-
-        <!-- Caption Overlay (auto-changes with slide) -->
-        <div class="hero-caption">
-          <h1 class="hero-title">
-            <span class="en"></span>
-            <span class="ar" dir="rtl"></span>
-          </h1>
-          <a class="btn btn-olive hero-cta" href="#" aria-label="Call to action"></a>
-        </div>
+      <!-- Slide 1: Video -->
+      <div class="slide is-active" data-title-en="Dune Bashing Dubai"
+           data-title-ar="قيادة الكثبان الرملية" data-cta="Watch & Book" data-cta-link="#contact">
+        <video class="video" autoplay muted playsinline preload="metadata">
+          <source src="dune bashing video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
-    </section>
+
+      <!-- Slide 2: Image 1 -->
+      <div class="slide" data-title-en="Premium Desert Safari"
+           data-title-ar="سفاري صحراوي فاخر" data-cta="Book Now" data-cta-link="#contact">
+        <img src="demo header.png" alt="Luxury desert safari camp" loading="lazy" />
+      </div>
+
+      <!-- Slide 3: Image 2 -->
+      <div class="slide" data-title-en="Sunset Camel Ride"
+           data-title-ar="جولة الجمال وقت الغروب" data-cta="Explore Packages" data-cta-link="#desert-safari">
+        <img src="demo header 3.png" alt="Camel caravan at sunset" loading="lazy" />
+      </div>
+
+      <!-- Caption Overlay -->
+      <div class="hero-caption">
+        <h1 class="hero-title">
+          <span class="en"></span>
+          <span class="ar" dir="rtl"></span>
+        </h1>
+        <a class="btn btn-olive hero-cta" href="#" aria-label="Call to action"></a>
+      </div>
+    </div>
+  </section>
 
     <!-- ===== ABOUT ===== -->
     <section id="about" class="section section-alt container">
