@@ -35,3 +35,14 @@
 
     // Current year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+  //  card flipping
+
+    const flipButtons = document.querySelectorAll('.flip-btn');
+
+flipButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.flip-card');
+    card.classList.toggle('flipped');
+  });
+});

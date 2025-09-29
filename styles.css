@@ -38,7 +38,7 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 .brand-logo{ width:42px; height:42px; object-fit:cover; border-radius:50%; }
 .brand-name{
   font-family: 'Cairo', sans-serif;
-  font-weight:700; font-size:1.25rem; color: var(--olive);
+  font-weight:700; font-size:1.75rem; color: var(--olive);
   letter-spacing: .2px;
 }
 .nav-toggle{
@@ -90,6 +90,7 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 
 /* ====== Sections ====== */
 .section{ padding: 70px 0; }
+
 .section-alt{ background: var(--sand); border-top:1px solid rgba(0,0,0,.04); border-bottom:1px solid rgba(0,0,0,.04); }
 .section-head{ text-align:center; margin-bottom: 28px; }
 .section-title{
@@ -100,17 +101,165 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 .section-subtitle{ color: var(--muted); margin: 0 auto; max-width: 780px; }
 
 /* ====== Cards ====== */
-.card-grid{
-  display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
-.card{
-  background: var(--white); border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow);
-  display:flex; flex-direction:column; border:1px solid rgba(0,0,0,.04);
+
+/* Flip Card Container */
+.flip-card {
+  perspective: 1000px;
+  margin: 10px 0;
 }
-.card img{ width:100%; height:220px; object-fit:cover; }
-.card-body{ padding:16px 16px 18px; display:flex; flex-direction:column; gap:8px; }
-.card-title{ margin:0; font-weight:700; color: var(--olive); font-family: 'Cairo', sans-serif; }
-.card-text{ margin:0 0 10px; color:#484848; }
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Card Styling */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,.04);
+  padding-bottom: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 25px; /* Rounded image corners */
+}
+
+.card-body {
+  padding: 16px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.85rem; /* Increased font size */
+  color: var(--olive);
+  font-family: 'Cairo', sans-serif;
+}
+
+.card-text {
+  margin: 0 0 10px;
+  color: #484848;
+}
+
+.card-price {
+  font-size: 0.95rem;
+  color: #484848;
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.card-price span {
+  font-weight: 700;
+  font-size: 1.1rem; /* Slightly bigger for emphasis */
+  color: var(--olive);
+}
+
+.card-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 10px;
+  color: #484848;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.card-checklist li {
+  display: flex;
+  align-items: center;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.btn-outline {
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline.primary {
+  background: var(--olive);
+  color: white;
+  border: none;
+}
+
+.btn-outline.primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline.secondary {
+  background: transparent;
+  border: 1px solid var(--olive);
+  color: var(--olive);
+}
+
+.btn-outline.secondary:hover {
+  background: var(--olive);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+}
+
 
 /* ====== FAQ ====== */
 .faq-grid{
