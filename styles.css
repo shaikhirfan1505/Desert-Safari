@@ -89,6 +89,15 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 .btn-outline{ background: transparent; color: var(--olive); border-color: var(--olive); }
 .btn-outline:hover{ background: var(--olive); color: var(--white); transform: translateY(-1px); }
 
+.about-content {
+  padding-left: 20px;   /* space from left */
+  padding-right: 20px;  /* space from right */
+  /* optional: top & bottom spacing */
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
 /* ====== Sections ====== */
 .section{ padding: 70px 0; }
 
@@ -294,38 +303,113 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
   display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:10px;
 }
 
-/* ====== Footer ====== */
-.footer{
-  background:#101410; color:#c9d0c4;
+/* ===== Footer ===== */
+.footer {
+  background: #101410;
+  color: #c9d0c4;
   margin-top: 30px;
+  font-family: 'Cairo', sans-serif;
 }
-.footer-grid{
-  display:grid; grid-template-columns: 1.1fr .9fr 1fr; gap: 24px; padding: 36px 0;
-}
-.footer .brand-logo{ width:180px; height:180px; border-radius:50%; }
-.footer-brand p{ margin: 10px 0 12px; color:#e8ecd8; font-weight:700; }
-.footer-icons a{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:40px; height:40px; margin-right:8px; border-radius:10px;
-  background:#1a2116; color:#DCE5D2; text-decoration:none; border:1px solid rgba(255,255,255,.06);
-  transition:.25s ease;
-}
-.footer-icons a:hover{ transform: translateY(-2px); color: var(--white); }
 
-.footer-links h4, .footer-contact h4{
-  margin:0 0 10px; color:#e8ecd8; font-family:'Cairo', sans-serif;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr 1fr;
+  gap: 24px;
+  padding: 36px 0;
 }
-.footer-links ul{ list-style:none; padding:0; margin:0; }
-.footer-links a{ color:#c9d0c4; text-decoration:none; }
-.footer-links a:hover{ color: var(--white); }
 
-.footer-contact p, .footer-contact a{ color:#c9d0c4; text-decoration:none; }
-.footer-contact a:hover{ color: var(--white); }
-
-.copyright{
-  text-align:center; padding: 12px 0; border-top:1px solid rgba(255,255,255,.08);
-  font-size:.95rem; color:#aab4a2;
+.footer .brand-logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
 }
+
+.footer-brand p {
+  margin: 10px 0 12px;
+  color: #e8ecd8;
+  font-weight: 700;
+}
+
+/* Social Icons */
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 10px;
+  background: #2a2f28;   /* contrast */
+  color: #ffffff;        /* visible */
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 18px;
+  transition: all 0.25s ease;
+}
+
+.footer-icons a:hover {
+  background: var(--olive);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Quick Links & Contact */
+.footer-links h4,
+.footer-contact h4 {
+  margin: 0 0 10px;
+  color: #e8ecd8;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: #c9d0c4;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+.footer-contact p,
+.footer-contact a {
+  color: #c9d0c4;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: var(--white);
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+  color: #aab4a2;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-icons a {
+    margin: 5px;
+  }
+}
+
 
 /* ====== Responsive ====== */
 @media (max-width: 980px){
@@ -344,6 +428,28 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 @media (max-width: 640px){
   .card-grid{ grid-template-columns: 1fr; }
   .slider{ height: clamp(360px, 64vw, 520px); }
-  .footer-grid{ grid-template-columns: 1fr; text-align:center; }
-  .footer-icons a{ margin-inline: 6px; }
+  .footer-grid {
+    grid-template-columns: 1fr; /* Stack footer sections vertically */
+    text-align: center;         /* Center all content */
+    gap: 20px;                  /* Optional spacing between sections */
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;     /* Stack logo, text, icons */
+    align-items: center;        /* Center horizontally */
+  }
+
+  .footer-links,
+  .footer-contact {
+    text-align: center;         /* Center the text */
+  }
+
+  .footer-icons {
+    justify-content: center;    /* Center icons row */
+  }
+
+  .footer-icons a {
+    margin: 5px;                /* Spacing between icons */
+  }
 }
