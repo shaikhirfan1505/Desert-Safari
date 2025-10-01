@@ -1,10 +1,20 @@
 // Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav');
-navToggle.addEventListener('click', () => {
+
+navToggle.addEventListener('click', (e) => {
   const expanded = navToggle.getAttribute('aria-expanded') === 'true';
   navToggle.setAttribute('aria-expanded', String(!expanded));
   nav.classList.toggle('open');
+  e.stopPropagation(); // prevent immediate document click from closing
+});
+
+// Close nav when clicking outside
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target) && !navToggle.contains(e.target)) {
+    nav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
 });
 
 // Slider setup
@@ -67,5 +77,18 @@ document.querySelectorAll('.flip-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     const flipCard = this.closest('.flip-card');
     flipCard.classList.toggle('flipped');
+  });
+});
+// Handle mobile dropdowns for all dropdowns
+document.querySelectorAll('.nav-list .dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  const menu = dropdown.querySelector('.dropdown-menu');
+
+  toggle.addEventListener('click', (e) => {
+    // Only allow toggle if mobile nav is open
+    if (nav.classList.contains('open')) {
+      e.preventDefault();            // prevent default anchor jump
+      menu.classList.toggle('open'); // toggle submenu
+    }
   });
 });
