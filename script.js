@@ -63,10 +63,9 @@ scheduleNextSlide();
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Card flipping
-const flipButtons = document.querySelectorAll('.flip-btn');
-flipButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const card = button.closest('.flip-card');
-    card.classList.toggle('flipped');
+document.querySelectorAll('.flip-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const flipCard = this.closest('.flip-card');
+    flipCard.classList.toggle('flipped');
   });
 });

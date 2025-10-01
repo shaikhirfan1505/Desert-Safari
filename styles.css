@@ -115,6 +115,7 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  align-items: center;
 }
 
 /* Flip Card Container */
@@ -147,6 +148,8 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 
 /* Card Styling */
 .card {
+  width: 95%;
+  margin: 0 auto;
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
@@ -154,20 +157,23 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
   border-radius: 25px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   border: 3px solid rgba(0,0,0,.04);
   padding-bottom: 15px;
 }
 
 .card img {
-  width: 100%;
+  width: 96%;
   height: 280px;
   object-fit: cover;
+  margin-top: 7px;
   border-radius: 25px; /* Rounded image corners */
 }
 
 .card-body {
   padding: 16px 16px 18px;
   display:flex;
+  align-content: center;
   flex-direction: column;
   gap: 8px;
 }
@@ -531,3 +537,38 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
     margin: 5px;                /* Spacing between icons */
   }
 }
+
+  #whatsapp-button {
+    position: fixed;
+    bottom: 20px;  /* distance from bottom */
+    left: 20px;    /* distance from left */
+    width: 50px;
+    height: 50px;
+    z-index: 9999; /* very high so it stays on top */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25D366;
+    transition: transform 0.2s;
+    touch-action: manipulation; /* improves mobile touch */
+  }
+
+  #whatsapp-button img {
+    width: 70%;
+    height: 70%;
+  }
+
+  #whatsapp-button:hover {
+    transform: scale(1.1);
+  }
+
+  /* Optional: slightly bigger on mobile for easier tap */
+  @media (max-width: 768px) {
+    #whatsapp-button {
+      width: 80px;
+      height: 80px;
+    }
+  }
