@@ -96,7 +96,7 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 /* Optional arrow for dropdown */
 .dropdown > a::after {
   content: ' ▾';
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 
