@@ -25,14 +25,23 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 .container{ width:min(1200px, 92%); margin-inline:auto; }
 
 /* ====== Header / Nav ====== */
-.site-header{
-  position: sticky; top:0; z-index: 1000;
-  background: transparent;
-  border-bottom: 1px solid rgba(0,0,0,.06);
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--sand);
+  max-width: 95%;
+  margin-top: 20px;                 /* Control the width */
+  margin: 20px auto 0 auto;       /* ✅ Center it horizontally */
+  border-radius: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05); /* Optional subtle shadow */
 }
+
 .nav-wrap{
   display:flex; align-items:center; justify-content:space-between;
-  gap: 20px; padding: 12px 0;
+  gap: 20px; padding: 12px 0 ;
+
 }
 .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
 .brand-logo{ width:42px; height:42px; object-fit:cover; border-radius:50%; }
@@ -98,28 +107,15 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
   content: ' ▾';
   font-size: 1em;
 }
-@media (min-width: 768px) {
-  .nav-box {
-    background: rgba(240, 240, 240, 0.85);  /* more visible smoky white */
-    border-radius: var(--radius);           /* 14px */
-    padding: 12px 20px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* deeper shadow for floating effect */
-    backdrop-filter: blur(6px);             /* frosted effect */
-    -webkit-backdrop-filter: blur(6px);     /* for Safari */
-    transition: all 0.3s ease;
-  }
 
-  .nav-list {
-    gap: 26px;
-  }
-}
 
 
 /* ====== Hero / Slider ====== */
 .hero{ position:relative; }
-.slider{ position:relative; height: clamp(420px, 62vw, 640px); overflow:hidden;  border-radius: 18px; /* or any value you like */
-  overflow: hidden;   margin-left: 35px; margin-right: 35px; /* required to clip the corners */ margin-top: 25px;
-}
+.slider{ position:relative; height: clamp(500px, 62vw, 640px); overflow:hidden;  
+
+  margin-top: 10px; /* or any value you like */
+  overflow: hidden;   }
 .slide{
   position:absolute; inset:0; opacity:0; transition: opacity .8s ease;
 }
@@ -574,7 +570,8 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 }
 @media (max-width: 640px){
   .card-grid{ grid-template-columns: 1fr; }
-  .slider{ height: clamp(360px, 64vw, 520px); }
+  .slider{ height: clamp(500px, 64vw, 520px); }
+  .slider .video{object-fit: cover;}
   .footer-grid {
     grid-template-columns: 1fr; /* Stack footer sections vertically */
     text-align: center;         /* Center all content */
