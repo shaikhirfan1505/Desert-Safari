@@ -27,7 +27,7 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 /* ====== Header / Nav ====== */
 .site-header{
   position: sticky; top:0; z-index: 1000;
-  background: var(--white);
+  background: transparent;
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
 .nav-wrap{
@@ -98,11 +98,28 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
   content: ' ▾';
   font-size: 1em;
 }
+@media (min-width: 768px) {
+  .nav-box {
+    background: rgba(240, 240, 240, 0.85);  /* more visible smoky white */
+    border-radius: var(--radius);           /* 14px */
+    padding: 12px 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* deeper shadow for floating effect */
+    backdrop-filter: blur(6px);             /* frosted effect */
+    -webkit-backdrop-filter: blur(6px);     /* for Safari */
+    transition: all 0.3s ease;
+  }
+
+  .nav-list {
+    gap: 26px;
+  }
+}
 
 
 /* ====== Hero / Slider ====== */
 .hero{ position:relative; }
-.slider{ position:relative; height: clamp(420px, 62vw, 640px); overflow:hidden; }
+.slider{ position:relative; height: clamp(420px, 62vw, 640px); overflow:hidden;  border-radius: 18px; /* or any value you like */
+  overflow: hidden;   margin-left: 35px; margin-right: 35px; /* required to clip the corners */ margin-top: 25px;
+}
 .slide{
   position:absolute; inset:0; opacity:0; transition: opacity .8s ease;
 }
@@ -147,7 +164,7 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 /* ====== Sections ====== */
 .section{ padding: 70px 0; }
 
-.section-alt{ background: var(--sand); border-top:1px solid rgba(0,0,0,.04); border-bottom:1px solid rgba(0,0,0,.04); }
+.section-alt{ background: var(--sand); border-top:1px solid rgba(0,0,0,.04); border-bottom:1px solid rgba(0,0,0,.04); margin-top: 25px; border-radius: 35px; }
 .section-head{ text-align:center; margin-bottom: 28px; }
 .section-title{
   font-family: 'Cairo', sans-serif; font-weight:700; color: var(--olive);
