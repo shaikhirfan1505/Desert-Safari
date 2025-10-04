@@ -15,6 +15,9 @@
   
   <link rel="stylesheet" href="styles.css" />
 </head>
+<style>
+
+</style>
 <body>
 
   <!-- ===== NAVBAR ===== -->
@@ -55,6 +58,8 @@
 
   <!-- ===== HERO / SLIDER ===== -->
 <main id="home">
+
+   
   </main>
 
 <!-- ===== FOOTER ===== -->
@@ -106,5 +111,19 @@
 
 
  <script src="script.js"></script>
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const flipButtons = document.querySelectorAll('.flip-btn');
+
+    flipButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const card = this.closest('.flip-card');
+        card.classList.toggle('flipped');
+      });
+    });
+  });
+</script>
+
+
 </body>
 </html>

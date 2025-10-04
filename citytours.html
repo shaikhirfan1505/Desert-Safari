@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desert Safari packages</title>
+
+  <!-- Google Fonts: Cairo + Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/J+e7O9XyXrN9T+0U1wWb4e9c9w2KMWvYqLQO+v9QnF3QF6H3Qk5xv5gCz3v56y7r1h4rYx4Yg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<style>
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+
+    /* --- CITY TOUR CARD SECTIONS --- */
+    .tour-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .tour-section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: var(--bg-light);
+      padding: 3rem 2rem;
+      border-radius: 10px;
+    }
+
+    .tour-image {
+      flex: 1 1 45%;
+    }
+
+    .tour-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .tour-content {
+      flex: 1 1 50%;
+    }
+
+    .tour-content h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .tour-content p {
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+
+    .tour-content .card-highlights {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .tour-content .card-price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .card-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-family: "Cairo", sans-serif;
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline.primary:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-outline.secondary {
+      border-color: #222;
+      color: #222;
+    }
+
+    .btn-outline.secondary:hover {
+      background: #222;
+      color: var(--white);
+    }
+    /* Sand background for alternate sections */
+.section-alt {
+  background-color: #f3e5c0; /* soft sand tone */
+  padding: 3.5rem 2rem;
+  border-radius: 10px;
+}
+
+
+    /* --- RESPONSIVE DESIGN --- */
+    @media (max-width: 900px) {
+      .tour-section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .tour-image,
+      .tour-content {
+        flex: 1 1 100%;
+      }
+
+      .tour-content {
+        margin-top: 1.5rem;
+      }
+    }
+  </style>
+</style>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="desert_demo logo.png" alt="Company Logo" class="brand-logo" />
+        <span class="brand-name">Desert Safari</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav class="nav" aria-label="Main">
+  <ul class="nav-list">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+    <!-- Packages dropdown -->
+    <li class="dropdown">
+      <a href="#packages">Packages </a>
+      <ul class="dropdown-menu">
+        <li><a href="desertsafari.html" class="active">Desert Safari</a></li>
+        <li><a href="atvride.html">ATV Ride </a></li>
+        <li><a href="dunebuggy.html">Dune Buggy </a></li>
+        <li><a href="citytours.html">City Tours</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="blog.html">Blogs</a></li>
+  </ul>
+</nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO / SLIDER ===== -->
+<main id="home">
+  <section class="hero">
+    <div class="slider" role="region" aria-label="Featured media slider">
+
+     
+
+      <!-- Slide 2: Image 1 -->
+      <div class="slide" data-title-en="Premium Desert Safari"
+           data-title-ar="سفاري صحراوي فاخر" data-cta="Book Now" data-cta-link="#contact">
+        <img src="abc.png" alt="Luxury desert safari camp" loading="lazy" />
+      </div>
+
+      <!-- Slide 3: Image 2 -->
+      <div class="slide" data-title-en="Sunset Camel Ride"
+           data-title-ar="جولة الجمال وقت الغروب" data-cta="Explore Packages" data-cta-link="#desert-safari">
+        <img src="abc 3.png" alt="Camel caravan at sunset" loading="lazy" />
+      </div>
+
+      <!-- Caption Overlay -->
+      <div class="hero-caption">
+        <h1 class="hero-title">
+          <span class="en"></span>
+          <span class="ar" dir="rtl"></span>
+        </h1>
+        <a class="btn btn-olive hero-cta" href="#" aria-label="Call to action"></a>
+      </div>
+    </div>
+  </section>
+
+    <section class="section-head">
+      <h2 class="section-title">City Tours <span class="ar" dir="rtl">جولات المدينة</span></h2>
+      <p class="section-subtitle">Explore Dubai’s iconic landmarks, culture, and vibrant city life with guided tours.</p>
+    </section>
+
+    <!-- SECTION 1: OLD DUBAI -->
+    <section class="tour-section">
+      <div class="tour-image">
+        <img src="demo old dubai.png" alt="Old Dubai guided tour">
+      </div>
+      <div class="tour-content">
+        <h3>Old Dubai</h3>
+        <p>Step back in time exploring the historic heart of Dubai. Visit the bustling souks, take an abra ride across Dubai Creek, and marvel at heritage houses and traditional architecture.</p>
+        <p class="card-highlights"><strong>Highlights:</strong> Souks, Abra ride, Heritage houses, Cultural insights, Many More...</p>
+        <p class="card-price">Price starting from just <span>AED 129</span></p>
+        <div class="card-buttons">
+          <a href="#details" class="btn btn-outline secondary">Know More</a>
+          <a href="#contact" class="btn btn-outline primary">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MODERN DUBAI -->
+
+<section class="tour-section section-alt">
+  <div class="tour-image">
+    <img src="demo dubai.png" alt="Modern Dubai guided tour">
+  </div>
+  <div class="tour-content">
+    <h3>Dubai Full Day Tour</h3>
+    <p>Discover Dubai’s contemporary skyline and landmarks. Visit Burj Khalifa, Dubai Marina, and Ain Dubai while enjoying modern architecture, shopping districts, and vibrant cityscapes.</p>
+    <p class="card-highlights"><strong>Highlights:</strong> Burj Khalifa, Marina, Ain Dubai, Urban attractions, Many More...</p>
+    <p class="card-price">Price starting from just <span>AED 179</span></p>
+    <div class="card-buttons">
+      <a href="#details" class="btn btn-outline secondary">Know More</a>
+      <a href="#contact" class="btn btn-outline primary">Book Now</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- SECTION 3: DUBAI BY NIGHT -->
+    <section class="tour-section">
+      <div class="tour-image">
+        <img src="demo dubai night.png" alt="Dubai night tour">
+      </div>
+      <div class="tour-content">
+        <h3>Dubai Half Day Tour</h3>
+        <p>Experience Dubai’s magical evenings with sparkling city lights. Enjoy rooftop views, the dancing fountains at Burj Khalifa, and night photography for unforgettable memories.</p>
+        <p class="card-highlights"><strong>Highlights:</strong> City lights, Fountains, Rooftop view, Photography, Many More...</p>
+        <p class="card-price">Price starting from just <span>AED 199</span></p>
+        <div class="card-buttons">
+          <a href="#details" class="btn btn-outline secondary">Know More</a>
+          <a href="#contact" class="btn btn-outline primary">Book Now</a>
+        </div>
+      </div>
+    </section>
+    
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <!-- Brand & Social Icons -->
+    <div class="footer-brand">
+      <img src="desert_demo logo.png" alt="Company Logo" class="brand-logo" />
+      <p>Desert Safari Dubai</p>
+      <div class="footer-icons">
+        <a href="tel:+971500000000" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/971500000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://maps.google.com/?q=Dubai" target="_blank" rel="noopener" aria-label="Map"><i class="fa-solid fa-map-location-dot"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#desert-safari">Desert Safari</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <address class="footer-contact">
+      <h4>Address & Contact</h4>
+      <p>Dubai, United Arab Emirates</p>
+      <p><a href="tel:+971500000000">+971 50 000 0000</a></p>
+      <p><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+    </address>
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright">
+    © <span id="year"></span> Desert Safari Dubai. All rights reserved.
+  </div>
+</footer>
+
+<a href="https://wa.me/YourNumberHere" target="_blank" id="whatsapp-button">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+
+
+ <script src="script.js"></script>
+</body>
+</html>

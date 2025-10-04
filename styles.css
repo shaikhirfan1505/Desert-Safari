@@ -30,10 +30,8 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
   top: 0;
   z-index: 1000;
   background: var(--sand);
-  max-width: 95%;
-  margin-top: 20px;                 /* Control the width */
-  margin: 20px auto 0 auto;       /* ✅ Center it horizontally */
-  border-radius: 18px;
+  max-width: 100%;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 6px 16px rgba(0,0,0,0.05); /* Optional subtle shadow */
 }
@@ -112,10 +110,13 @@ img, video{ display:block; max-width:100%; height:auto; border:0; }
 
 /* ====== Hero / Slider ====== */
 .hero{ position:relative; }
-.slider{ position:relative; height: clamp(500px, 62vw, 640px); overflow:hidden;  
+.slider{ position:relative; height: clamp(500px, 62vw, 640px); overflow:hidden; 
+ 
 
-  margin-top: 10px; /* or any value you like */
-  overflow: hidden;   }
+ 
+  overflow: hidden;  
+
+}
 .slide{
   position:absolute; inset:0; opacity:0; transition: opacity .8s ease;
 }
