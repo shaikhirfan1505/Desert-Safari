@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Desert Safari / about </title>
+  <title>Desert Safari Dubai</title>
 
   <!-- Google Fonts: Cairo + Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -15,15 +15,13 @@
   
   <link rel="stylesheet" href="styles.css" />
 </head>
-<style>
-
-</style>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
+       
+      <a href="#" class="brand">
         <img src="desert_demo logo.png" alt="Company Logo" class="brand-logo" />
         <span class="brand-name">Desert Safari</span>
       </a>
@@ -31,11 +29,13 @@
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
+      
 
       <nav class="nav" aria-label="Main">
+        
   <ul class="nav-list">
-    <li><a href="index.html" >Home</a></li>
-    <li><a href="about.html" class="active" >About Us</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
 
     <!-- Packages dropdown -->
     <li class="dropdown">
@@ -48,43 +48,15 @@
       </ul>
     </li>
 
-    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="gallery.html"  class="active" >Gallery</a></li>
     <li><a href="contact.html">Contact Us</a></li>
     <li><a href="blog.html">Blogs</a></li>
   </ul>
+  
 </nav>
     </div>
   </header>
 
-  <!-- ===== HERO / SLIDER ===== -->
-<main id="home">
-  
-<!-- ===== ABOUT ===== -->
-<section id="about" class="section section-alt container">
-  <div class="section-head">
-    <h2 class="section-title">About Us <span class="ar" dir="rtl">من نحن</span></h2>
-    <p class="section-subtitle">
-      Authentic, eco-conscious desert experiences in Dubai — luxury camps, dune bashing, camel rides, stargazing, and gourmet Emirati cuisine.
-    </p>
-  </div>
-
-  <div class="about-content">
-    <p>
-      Our desert safari adventures in Dubai are meticulously curated by experts with <strong>12+ years of on-field experience</strong>. Every activity, from thrilling dune bashing to serene camel rides, is conducted with safety, precision, and an unmatched passion for the desert.
-    </p>
-
-    <p>
-      Guests can indulge in <strong>luxury desert camps</strong>, savor gourmet Emirati cuisine, and enjoy stargazing nights under the Arabian sky. Our team ensures each moment is immersive, memorable, and perfectly tailored for families, groups, and adventure enthusiasts alike.
-    </p>
-
-    <p>
-      Experience the <strong>magic of the Dubai desert</strong> with trusted guides who blend traditional expertise with modern adventure techniques. From photography stops at golden dunes to cultural performances, every experience is crafted for comfort, thrill, and authenticity — all with an Arabic touch. <span class="ar" dir="rtl">كل تجربة مليئة بالراحة والإثارة والأصالة</span>
-    </p>
-  </div>
-</section>
-
-   
-  </main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
@@ -135,19 +107,5 @@
 
 
  <script src="script.js"></script>
- <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const flipButtons = document.querySelectorAll('.flip-btn');
-
-    flipButtons.forEach(btn => {
-      btn.addEventListener('click', function () {
-        const card = this.closest('.flip-card');
-        card.classList.toggle('flipped');
-      });
-    });
-  });
-</script>
-
-
 </body>
 </html>
