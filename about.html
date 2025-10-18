@@ -15,10 +15,163 @@
   
   <link rel="stylesheet" href="styles.css" />
 </head>
-<style>
 
+<style>
+/* ====== ABOUT PAGE STYLES ====== */
+.section{
+  padding: 60px 0;
+}
+.section-head{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title{
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--olive-700);
+}
+.section-subtitle{
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.container{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Who We Are */
+.who-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+.who-text{flex:1; min-width:280px;}
+.who-image{flex:1; min-width:280px;}
+.who-image img{
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Why Choose Us */
+.choose-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+.choose-cards .card{
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform .3s;
+}
+.choose-cards .card:hover{
+  transform: translateY(-5px);
+}
+.choose-cards .card i{
+  font-size: 2rem;
+  color: var(--olive);
+  margin-bottom: 10px;
+}
+
+/* Our Experiences */
+.experience-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+}
+.experience-card{
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--white);
+  transition: transform .3s;
+}
+.experience-card:hover{transform: translateY(-5px);}
+.experience-card img{width:100%; height:180px; object-fit:cover;}
+.experience-card h3{margin: 15px 10px 5px; color: var(--olive-700);}
+.experience-card p{margin: 0 10px 15px; color: var(--muted);}
+
+/* Customer Stories */
+.testimonial-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+.testimonial-card{
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  font-style: italic;
+}
+.testimonial-card h4{margin-top:15px; color: var(--olive-700); font-weight:600; font-style:normal;}
+
+/* CTA */
+.cta{
+  padding: 80px 20px;
+  color: var(--white);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-radius: var(--radius);
+}
+.cta .cta-btn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: var(--olive);
+  color: var(--white);
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .3s;
+}
+.cta .cta-btn:hover{background: var(--olive-700);}
+
+/* FAQs */
+.faq-accordion .faq-item{
+  margin-bottom: 15px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.faq-question{
+  width: 100%;
+  background: var(--sand);
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1rem;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  font-weight:600;
+  transition: background .3s;
+}
+.faq-question:hover{background: var(--olive);}
+.faq-answer{
+  background: var(--white);
+  padding: 15px 20px;
+  display: none;
+  color: var(--charcoal);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .who-content{flex-direction:column;}
+}
 </style>
+
 <body>
+
+
+  <main id="about-page"></main>
 
   <!-- ===== NAVBAR ===== -->
   <header class="site-header">
@@ -57,7 +210,7 @@
   </header>
 
   <!-- ===== HERO / SLIDER ===== -->
-<main id="home">
+
   
 <!-- ===== ABOUT ===== -->
 <section id="about" class="section section-alt container">
@@ -82,6 +235,147 @@
     </p>
   </div>
 </section>
+
+
+
+
+
+
+  <!-- ===== WHO WE ARE ===== -->
+  <section class="section who-we-are container">
+    <div class="section-head">
+      <h2 class="section-title">Who We Are <span class="ar" dir="rtl">من نحن</span></h2>
+      <p class="section-subtitle">
+        We are Desert Safari Dubai, providing authentic and luxury desert experiences with 12+ years of expertise.
+      </p>
+    </div>
+    <div class="who-content">
+      <div class="who-text">
+        <p>
+          Founded by desert adventure enthusiasts, we offer meticulously curated safaris, combining thrill, safety, and comfort. Our mission is to deliver unforgettable experiences for families, couples, and adventure seekers alike.
+        </p>
+      </div>
+      <div class="who-image">
+        <img src="desert_team.jpg" alt="Our Team in Desert">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section why-choose-us container">
+    <div class="section-head">
+      <h2 class="section-title">Why Choose Us</h2>
+    </div>
+    <div class="choose-cards">
+      <div class="card">
+        <i class="fa-solid fa-star"></i>
+        <h3>12+ Years Experience</h3>
+        <p>Guided by experts with over a decade of desert adventure experience.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-campground"></i>
+        <h3>Luxury Camps</h3>
+        <p>Relax in comfortable desert camps with gourmet Emirati cuisine.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Family Friendly</h3>
+        <p>Activities tailored for families, kids, and groups of all sizes.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Safety First</h3>
+        <p>All rides and activities follow strict safety measures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR EXPERIENCES ===== -->
+  <section class="section our-experiences container">
+    <div class="section-head">
+      <h2 class="section-title">Our Experiences</h2>
+    </div>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <img src="dune_bashing.jpg" alt="Dune Bashing">
+        <h3>Dune Bashing</h3>
+        <p>Thrilling rides over golden dunes with experienced drivers.</p>
+      </div>
+      <div class="experience-card">
+        <img src="quad_bike.jpg" alt="Quad Biking">
+        <h3>Quad Biking</h3>
+        <p>Double and single seat quad rides for all skill levels.</p>
+      </div>
+      <div class="experience-card">
+        <img src="camel_ride.jpg" alt="Camel Rides">
+        <h3>Camel Rides</h3>
+        <p>Traditional desert experience for families and kids.</p>
+      </div>
+      <div class="experience-card">
+        <img src="desert_camp.jpg" alt="Luxury Camps">
+        <h3>Luxury Camps</h3>
+        <p>Relaxing under the stars in premium desert camps.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CUSTOMER STORIES ===== -->
+  <section class="section customer-stories container">
+    <div class="section-head">
+      <h2 class="section-title">What Our Guests Say</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Amazing desert safari! The guides were so professional and the dune bashing was thrilling."</p>
+        <h4>Sarah K., UK</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Our family had a magical experience. The luxury camp and camel ride were unforgettable."</p>
+        <h4>Ahmed M., UAE</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Best adventure in Dubai! Highly recommended for anyone wanting desert excitement."</p>
+        <h4>Emily R., Canada</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section cta" style="background-image:url('desert_sunset.jpg');">
+    <div class="cta-content">
+      <h2>Ready for your Desert Adventure?</h2>
+      <a href="contact.html" class="cta-btn">Book Your Safari</a>
+    </div>
+  </section>
+
+  <!-- ===== FAQs ===== -->
+  <section class="section faqs container">
+    <div class="section-head">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <button class="faq-question">Is it safe for children?</button>
+        <div class="faq-answer"><p>Yes, we provide child-safe activities and equipment.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What should I wear?</button>
+        <div class="faq-answer"><p>Comfortable clothing, sunglasses, and closed shoes are recommended.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How long is the safari?</button>
+        <div class="faq-answer"><p>Most safaris range from 4 to 6 hours depending on the package.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Are meals included?</button>
+        <div class="faq-answer"><p>Luxury camp safaris include a full meal and refreshments.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I book a private tour?</button>
+        <div class="faq-answer"><p>Yes, private tours are available upon request.</p></div>
+      </div>
+    </div>
+  </section>
 
    
   </main>
@@ -146,6 +440,17 @@
       });
     });
   });
+</script>
+
+
+<script>
+// FAQ Accordion JS
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const answer = q.nextElementSibling;
+    answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+  });
+});
 </script>
 
 
